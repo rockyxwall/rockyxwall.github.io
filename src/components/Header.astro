@@ -1,0 +1,34 @@
+---
+import { Search, Moon, Sun, User } from 'lucide-react';
+
+---
+
+<header class="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+  <div class="container flex h-14 max-w-screen-md items-center justify-between mx-auto px-4">
+    <div class="mr-4 flex">
+      <a class="mr-6 flex items-center space-x-2 font-bold" href={import.meta.env.BASE_URL}>
+        <span class="inline-block">rockyxwall</span>
+      </a>
+    </div>
+
+    <div class="flex flex-1 items-center justify-end space-x-4">
+      <nav class="flex items-center space-x-6 text-sm font-medium">
+        <a class="transition-colors hover:text-foreground/80 text-foreground/60" href={`${import.meta.env.BASE_URL}/blog`}>Blog</a>
+        <a class="transition-colors hover:text-foreground/80 text-foreground/60" href={`${import.meta.env.BASE_URL}/projects`}>Projects</a>
+        <a class="transition-colors hover:text-foreground/80 text-foreground/60" href={`${import.meta.env.BASE_URL}/about`}>About me</a>
+      </nav>
+
+
+      <div class="flex items-center space-x-2">
+        <button class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground h-9 w-9">
+          <Search className="h-4 w-4" />
+          <span class="sr-only">Search</span>
+        </button>
+        <button class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground h-9 w-9">
+          <Moon className="h-4 w-4" />
+          <span class="sr-only">Toggle theme</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

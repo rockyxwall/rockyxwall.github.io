@@ -1,0 +1,85 @@
+---
+import '../styles/globals.css';
+import '@fontsource-variable/geist';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import TimelineItem from '../components/TimelineItem.astro';
+import { Check } from 'lucide-react';
+
+const title = "rockyxwall | About me";
+const description = "Student and tech hobbyist learning web development.";
+---
+
+<html lang="en" class="dark">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}/favicon.svg`} />
+
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+    <meta name="description" content={description} />
+	</head>
+	<body class="bg-background text-foreground font-sans antialiased min-h-screen flex flex-col">
+    <Header />
+
+    <main class="flex-1 container max-w-screen-md mx-auto px-4 py-12 md:py-24 space-y-20">
+      <!-- Hero Section -->
+      <section class="space-y-6">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight leading-tight">
+          Hi, I'm rockyxwall <span class="inline-block animate-bounce">👋</span> A student and tech hobbyist exploring the world of web development.
+        </h1>
+      </section>
+
+      <!-- Quick Facts -->
+      <section class="space-y-8">
+        <h2 class="text-xl font-bold tracking-tight">Quick facts about me</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+          <div class="flex gap-3">
+            <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+            <p class="text-sm text-foreground/70">I'm a student with a passion for technology.</p>
+          </div>
+          <div class="flex gap-3">
+            <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+            <p class="text-sm text-foreground/70">I'm currently focused on learning modern web development technologies like React and Astro.</p>
+          </div>
+          <div class="flex gap-3">
+            <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+            <p class="text-sm text-foreground/70">I love building tools that make my personal life and study habits easier.</p>
+          </div>
+          <div class="flex gap-3">
+            <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+            <p class="text-sm text-foreground/70">I'm a hobbyist who enjoys experimenting with user scripts and custom styles.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- My Journey -->
+      <section class="space-y-8">
+        <h2 class="text-xl font-bold tracking-tight">My journey</h2>
+        <div class="mt-8">
+          <TimelineItem date="The Beginning">
+            <p>My interest in technology started with a simple curiosity about how things work. As a student, I began exploring the web and realized the power of building my own tools.</p>
+          </TimelineItem>
+
+          <TimelineItem date="High School & Early Projects">
+            <p>During high school, I created <strong>lazy-study-doc</strong>, a personal site where I curated resources to help me and others study more effectively.</p>
+            <p>This experience solidified my interest in web development and led me to start learning the core languages: <strong>HTML, CSS, and JavaScript</strong>.</p>
+          </TimelineItem>
+
+          <TimelineItem date="Deepening Knowledge">
+            <p>I've been working through various <strong>JS-core-projects</strong> to build a solid foundation in programming logic and frontend development.</p>
+            <p>I also started creating <strong>custom user scripts and styles</strong> to personalize my browsing experience and improve my productivity.</p>
+          </TimelineItem>
+
+          <TimelineItem date="Current Focus">
+            <p>Today, I'm continuing my journey as a student and developer, exploring frameworks like <strong>React</strong> and building more complex applications.</p>
+            <p>I'm excited to see where this path takes me and to keep building things for the open web!</p>
+          </TimelineItem>
+        </div>
+      </section>
+    </main>
+
+    <Footer />
+	</body>
+</html>
