@@ -9,6 +9,9 @@ export default defineConfig({
   site: 'https://rockyxwall.github.io',
 
   integrations: [mdx(), sitemap(), react()],
+  build: {
+    format: 'file'
+  },
   vite: {
     plugins: [tailwindcss()],
     resolve: {

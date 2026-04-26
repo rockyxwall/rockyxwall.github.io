@@ -1,8 +1,5 @@
 ---
-import '../styles/globals.css';
-import '@fontsource-variable/geist';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 import { ExternalLink, Terminal } from 'lucide-react';
 
 const title = "Projects | rockyxwall";
@@ -33,19 +30,7 @@ const projects = [
 ];
 ---
 
-<html lang="en" class="dark">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}/favicon.svg`} />
-
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-    <meta name="description" content={description} />
-	</head>
-	<body class="bg-background text-foreground font-sans antialiased min-h-screen flex flex-col">
-    <Header />
-
+<BaseLayout title={title} description={description}>
     <main class="flex-1 container max-w-screen-md mx-auto px-4 py-12 md:py-24 space-y-12">
       <section class="space-y-4">
         <h1 class="text-3xl font-bold tracking-tight">Projects</h1>
@@ -82,7 +67,4 @@ const projects = [
         ))}
       </section>
     </main>
-
-    <Footer />
-	</body>
-</html>
+</BaseLayout>
